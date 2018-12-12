@@ -51,15 +51,15 @@ function validateInput(value) {
       }
     
     ]).then(function(ans){
-      var whatToBuy = (ans.id)-1;
-      var howMuchToBuy = parseInt(ans.qty);
-      var grandTotal = parseFloat(((res[whatToBuy].Price)*howMuchToBuy).toFixed(2));
+      var userPick = (ans.id);
+      var userQty = parseInt(ans.qty);
+      var grandTotal = parseFloat(((res[userPick].Price)*userQty).toFixed(2));
 
       //check if quantity is sufficient
-      if(res[whatToBuy].stock_quantity >= howMuchToBuy){
+      if(res[userPick].stock_quantity >= userQty){
         //after purchase, updates quantity in Products
         connection.query("UPDATE products SET ? WHERE ?", [
-        {stock_quantity: (res[whatToBuy].stock_quantity - howMuchToBuy)},
+        {stock_quantity: (res[userPick].stock_quantity - userQty)},
         {item_id: ans.id}
         ], function(err, result){
             if(err) throw err;
