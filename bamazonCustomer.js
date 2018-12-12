@@ -60,7 +60,7 @@ function validateInput(value) {
         //after purchase, updates quantity in Products
         connection.query("UPDATE products SET ? WHERE ?", [
         {stock_quantity: (res[whatToBuy].stock_quantity - howMuchToBuy)},
-        {ItemID: ans.id}
+        {item_id: ans.id}
         ], function(err, result){
             if(err) throw err;
             console.log("Success! Your total is $" + grandTotal.toFixed(2) + ". Your item(s) will be shipped to you in 3-5 business days.");
