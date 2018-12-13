@@ -1,4 +1,4 @@
-//require mysql and inquirer
+//require mysql, inquirer, and console.table
 var mysql = require('mysql');
 var inquirer = require('inquirer');
 var cTable = require('console.table');
@@ -23,7 +23,7 @@ connection.query('SELECT * FROM products', function(err, res){
     {
       type: "input",
       name: "id",
-      message: "What is the ID of the product you would like to purchase?",
+      message: "What is the Item ID of the product you would like to purchase?",
       validate: function(value){
         if(isNaN(value) == false && parseInt(value) <= res.length && parseInt(value) > 0){
           return true;
