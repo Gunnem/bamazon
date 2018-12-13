@@ -25,13 +25,13 @@ Node bamazonCustomer.js command in terminal: Running the app will first display 
 
 Entering item number and quantity will return the total price. It will then ask the user whether to purchase something else or quit.
 
-![run image](https://github.com/Gunnem/bamazon/blob/master/PurchaseAnother.png)
+![run image](https://github.com/Gunnem/bamazon/blob/master/images/PurchaseAnother.png)
 
 If there is insufficient quantity, the app will notify the user that there isn't enough in stock.
 
-![run image](https://github.com/Gunnem/bamazon/blob/master/outofstock.png)
+![run image](https://github.com/Gunnem/bamazon/blob/master/images/outofstock.png)
 
 When finished:
 
-![run image](https://github.com/Gunnem/bamazon/blob/master/finished.png)
+![run image](https://github.com/Gunnem/bamazon/blob/master/images/finished.png)
 
