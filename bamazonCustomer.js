@@ -1,6 +1,7 @@
 //require mysql and inquirer
 var mysql = require('mysql');
 var inquirer = require('inquirer');
+var cTable = require('console.table');
 //create connection to db
 var connection = mysql.createConnection({
   host: "localhost",
