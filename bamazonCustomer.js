@@ -51,17 +51,14 @@ connection.query('SELECT * FROM products', function(err, res){
 
       //check if quantity is sufficient
       if(res[whatToBuy].stock_quantity >= howMuchToBuy){
-        //after purchase, updates quantity in Products
-        connection.query("UPDATE Products SET ? WHERE ?", [
+        //after purchase, updates quantity in products
+        connection.query("UPDATE products SET ? WHERE ?", [
         {stock_quantity: (res[whatToBuy].stock_quantity - howMuchToBuy)},
         {item_id: ans.id}
         ], function(err, result){
             if(err) throw err;
             console.log("Success! Your total is $" + grandTotal.toFixed(2) + ". Your item(s) will be shipped to you in 3-5 business days.");
         });
-
-        
-
       } else{
         console.log("Sorry, there's not enough in stock!");
       }
