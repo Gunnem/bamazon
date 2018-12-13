@@ -21,7 +21,7 @@ To run the customer interface please follow the steps below:
 
 Node bamazonCustomer.js command in terminal: Running the app will first display available inventory.
 
-![run image](https://github.com/Gunnem/bamazon/blob/master/runNode.png)
+![run image](https://github.com/Gunnem/bamazon/blob/master/images/runNode.png)
 
 Entering item number and quantity will return the total price. It will then ask the user whether to purchase something else or quit.
 
